@@ -1,0 +1,1 @@
+from map_dashboard import server as application 
