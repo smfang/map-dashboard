@@ -12,7 +12,7 @@ import os
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
-server = app.server  # This is important for deployment
+server = app.server  # This is important for Render
 
 # Generate some sample data with lat/lon coordinates and sample metrics
 np.random.seed(42)
