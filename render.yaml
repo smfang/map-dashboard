@@ -2,8 +2,12 @@ services:
   - type: web
     name: map-dashboard
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn map_dashboard:server
+    buildCommand: |
+      pip install -r requirements.txt
+      pip install gunicorn
+    startCommand: gunicorn --bind 0.0.0.0:$PORT map_dashboard:server --log-level debug
     envVars:
       - key: PYTHON_VERSION
-        value: 3.9.0 
+        value: 3.9.0
+      - key: PYTHONUNBUFFERED
+        value: "1" 

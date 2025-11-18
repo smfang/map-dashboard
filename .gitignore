@@ -22,6 +22,7 @@ var/
 
 # Virtual Environment
 venv/
+.venv/
 ENV/
 
 # IDE
@@ -38,3 +39,4 @@ ENV/
 .Trashes
 ehthumbs.db
 Thumbs.db 
+node_modules
